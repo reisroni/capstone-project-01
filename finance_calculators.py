@@ -1,19 +1,28 @@
-# =================================================================== #
-# Copyright (c) 2023. Roni Reis (RR23110011802) - All rights reserved #
-# =================================================================== #
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
 
-# ===================== T05 - Capstone Project ====================== #
+"""
+==================== T05 - Capstone Project ====================
+An investment calculator and a home loan repayment calculator.
+
+"""
+
+__author__ = "Roni Reis (RR23110011802)"
+__email__ = "reisrony@gmail.com"
+__copyright__ = "(c) 2023 All rights reserved"
+
 import math
 
+# Investment or bond selection menu
 print("investment - to calculate the amount of interest you'll earn on your investment")
 print("bond       - to calculate the amount you'll have to pay on a home loan\n")
-# Investment or bond selection
+
 selection = input("Enter either 'investment' or 'bond' from the menu above to proceed: ")
 selection = selection.lower().strip()
 
 if (selection == "investment"):
     #
-    # Interest calculation
+    # Calculate the amount of interest on an investment
     #
     principal = float(input("\nEnter the amount of money that your are depositing: "))
     rate = int(input("Enter the interest rate (without the '%' symbol): "))
@@ -49,7 +58,7 @@ if (selection == "investment"):
 
 elif (selection == "bond"):
     #
-    # Bond repayment calculation
+    # Calculate how much money the user will have to repay on a bond each month
     #
     house_value = float(input("\nEnter the value of the house: "))
     rate = int(input("Enter the interest rate (without the '%' symbol): "))
